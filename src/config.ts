@@ -6,7 +6,7 @@ export const SITE: Site = {
   profile: "https://khanhthanh.dev/",
   desc: "Tran Khanh Thanh portfolio and blog about machine learning, and data science.",
   title: "Thanh Tran",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "ogImage.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 3,
@@ -25,8 +25,8 @@ export const LOCALE = {
 } as const;
 
 export const LOGO_IMAGE = {
-  enable: true,
-  svg: true,
+  enable: false,
+  svg: false,
   width: 216,
   height: 46,
 };
