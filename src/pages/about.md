@@ -5,7 +5,7 @@ title: "About"
 
 Hello! I’m Thanh. I am a passionate high school student with interest in STEM, robotics, and programming. 
 
-Recently, I had the privilege of competing at [FIRST Global Challenge 2023](https://first.global/about/) in Singapore, where I won the Gold Medal for Finalist Winning Alliance. I participated in [Math and Science Summer Program](https://www.masspvn.org/en)
+Recently, I had the privilege of competing at [FIRST Global Challenge 2023](https://first.global/about/) in Singapore, where I won the Gold Medal for Finalist Winning Alliance. I participated in [Math and Science Summer Program](https://www.masspvn.org/en) and learned about Machine Learning. Moreover, my team has researched a paper about "Enhance Long Medical Document Summarize with LSG Attention".
 
 My technical journey includes skills in programming languages like Python, JavaScript, and C++, alongside hands-on experience in web development and machine learning.
 
@@ -15,7 +15,7 @@ Driven by a desire to inspire and support my peers, I founded the Ung Hoa B Robo
 I designed and crafted this based on [my personal blog](https://khanhthanh.dev).
 
 <div>
-  <img src="/public/ogImage.jpg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+  <img src="../../src/content/assets/ogImage.jpg" class="sm:w-1/2 mx-auto" alt="Trần Khánh Thành Tran Khanh Thanh khanhthanhdev thanhkt">
 </div>
 
 ## Tech Stack
