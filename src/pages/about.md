@@ -15,7 +15,7 @@ Driven by a desire to inspire and support my peers, I founded the Ung Hoa B Robo
 I designed and crafted this based on [my personal blog](https://khanhthanh.dev).
 
 <div>
-  <img src="../assets/ogImage.jpg" class="sm:w-1/2 mx-auto" alt="Trần Khánh Thành Tran Khanh Thanh khanhthanhdev thanhkt">
+  <img src="https://i.ibb.co/94Cqxvb/ogImage.jpg" class="sm:w-1/2 mx-auto" alt="Trần Khánh Thành Tran Khanh Thanh khanhthanhdev thanhkt">
 </div>
 
 ## Tech Stack
