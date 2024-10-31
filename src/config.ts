@@ -1,5 +1,5 @@
 import type { Site, SocialObjects } from "./types";
-
+import type { GiscusProps } from "@giscus/react";
 export const SITE: Site = {
   website: "https://khanhthanhdev.me/", // replace this with your deployed domain
   author: "Thanh Tran",
@@ -17,6 +17,19 @@ export const SITE: Site = {
     text: "Suggest Changes",
     appendFilePath: true,
   },
+};
+
+export const GISCUS: GiscusProps = {
+  repo: "khanhthanhdev/myblog",
+  repoId: "R_kgDONG0lCA",
+  category: "Announcements",
+  categoryId: "DIC_kwDONG0lCM4Cj3Hx",
+  mapping: "pathname",
+  reactionsEnabled: "0",
+  emitMetadata: "0",
+  inputPosition: "bottom",
+  lang: "en",
+  loading: "lazy",
 };
 
 export const LOCALE = {
