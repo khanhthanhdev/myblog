@@ -2,10 +2,10 @@ import type { Site, SocialObjects } from "./types";
 import type { GiscusProps } from "@giscus/react";
 export const SITE: Site = {
   website: "https://khanhthanhdev.me/", // replace this with your deployed domain
-  author: "Thanh Tran",
+  author: "ThanhTran",
   profile: "https://khanhthanhdev.me/",
   desc: "Tran Khanh Thanh portfolio and blog about machine learning, and data science.",
-  title: "Thanh Tran",
+  title: "ThanhTran",
   ogImage: "ogImage.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
