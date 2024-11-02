@@ -65,7 +65,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "LinkedIn",
-    href: "https://github.com/khanhthanhdev",
+    href: "https://www.linkedin.com/in/khanhthanhdev/",
     linkTitle: `${SITE.title} on LinkedIn`,
     active: true,
   },
@@ -77,7 +77,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "HuggingFace",
-    href: "https://huggingface.com/khanhthanhdev",
+    href: "https://huggingface.com/thanhkt",
     linkTitle: `${SITE.title} on Hugging Face`,
     active: true,
   },
