@@ -1,22 +1,35 @@
 import type { Site, SocialObjects } from "./types";
-
+import type { GiscusProps } from "@giscus/react";
 export const SITE: Site = {
-  website: "https://khanhthanh.dev/", // replace this with your deployed domain
-  author: "Thanh Tran",
-  profile: "https://khanhthanh.dev/",
+  website: "https://khanhthanhdev.me/", // replace this with your deployed domain
+  author: "ThanhTran",
+  profile: "https://khanhthanhdev.me/",
   desc: "Tran Khanh Thanh portfolio and blog about machine learning, and data science.",
-  title: "Thanh Tran",
-  ogImage: "astropaper-og.jpg",
+  title: "ThanhTran",
+  ogImage: "ogImage.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 3,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: true,
   editPost: {
-    url: "https://github.com/satnaing/astro-paper/edit/main/src/content/blog",
+    url: "https://github.com/khanhthanhdev/myblog/edit/main/content",
     text: "Suggest Changes",
     appendFilePath: true,
   },
+};
+
+export const GISCUS: GiscusProps = {
+  repo: "khanhthanhdev/myblog",
+  repoId: "R_kgDONG0lCA",
+  category: "Announcements",
+  categoryId: "DIC_kwDONG0lCM4Cj3Hx",
+  mapping: "pathname",
+  reactionsEnabled: "0",
+  emitMetadata: "0",
+  inputPosition: "bottom",
+  lang: "en",
+  loading: "lazy",
 };
 
 export const LOCALE = {
@@ -25,8 +38,8 @@ export const LOCALE = {
 } as const;
 
 export const LOGO_IMAGE = {
-  enable: true,
-  svg: true,
+  enable: false,
+  svg: false,
   width: 216,
   height: 46,
 };
@@ -52,7 +65,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "LinkedIn",
-    href: "https://github.com/khanhthanhdev",
+    href: "https://www.linkedin.com/in/khanhthanhdev/",
     linkTitle: `${SITE.title} on LinkedIn`,
     active: true,
   },
@@ -64,7 +77,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "HuggingFace",
-    href: "https://huggingface.com/khanhthanhdev",
+    href: "https://huggingface.com/thanhkt",
     linkTitle: `${SITE.title} on Hugging Face`,
     active: true,
   },
