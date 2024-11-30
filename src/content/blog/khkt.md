@@ -1,7 +1,7 @@
 ---
 author: Thanh Tran
 pubDatetime: 2024-11-29T23:22:00Z
-modDatetime: 
+modDatetime: 2024-11-30T11:06:22Z
 title: Trải nghiệm lần đầu thi khoa học kĩ thuật
 slug: thi-khkt
 featured: true
@@ -19,13 +19,13 @@ Tôi đã lỡ hẹn với cuộc thi từ năm lớp 11 khi thầy giáo gửi 
 
 # Giới thiệu về dự án của tôi
 Khi tham gia trường hè MASSP, tôi đã có thêm những góc nhìn mới về AI, đặc biệt là LLM và bắt đầu tìm hiểu các kĩ thuật tối ưu hiệu năng, độ chính xác của chúng. Kĩ thuật khá phổ biến đó là sử dụng RAG (Retrieval Augmented Generation), có thể dịch tạm là: "tăng cường truy xuất thông tin cho mô hình". 
-![image](https://hackmd.io/_uploads/rkS-8wwXyx.png)
+![image](../assets/khkt/khkt_rag_architec.gif)
 
 
 ### Vấn đề của các mô hình ngôn ngữ hiện tại
 Có thể nói ngắn gọn: Những mô hình ngôn ngữ lớn được huấn luyện trên một tập dữ liệu khổng lồ (chatGPT được huấn luyện trên 45Tb dữ liệu), những dữ liệu này được lấy chủ yếu từ Internet.
-Ví dụ: Nếu mô hình được đào tạo trên dữ liệu từ năm 2022 thì nếu hỏi những câu hỏi yêu cầu dữ liệu qua thời điểm đó, chúng sẽ không có thông tin và sẽ trả lời: 
-![image](https://hackmd.io/_uploads/BJpOgwv71g.png)
+Vi Nếu mô hình được đào tạo trên dữ liệu từ năm 2022 thì nếu hỏi những câu hỏi yêu cầu dữ liệu qua thời điểm đó, chúng sẽ không có thông tin và sẽ trả lời: 
+![image](../assets/khkt/khkt_problem.png)
 
 
 Một vấn đề khác đó là *hallucination - ảo giác*, các câu văn AI tạo ra đọc rất logic, mạch lạc nhưng thông tin chúng đưa ra không chính xác hoặc không có thật; nó như chúng ta viết văn nhưng lạc đề.
@@ -39,11 +39,12 @@ Nhưng có một số vấn đề với câu trả lời của tôi:
 * Không có dẫn chứng nào về câu trả lời
 * Dữ liệu có thể bị lỗi thời vì tôi đã đọc nó khoảng 6-8 năm trước
 
-Vì vậy tôi đã lên trang của NASA để tìm và nhận được thông tin: Sao Thổ có 146 vệ tinh nhân tạo
+Vì vậy tôi đã lên trang của NASA để tìm và nhận được thông tin: Sao Thổ có 146 vệ tinh nhân tạo.
+
 Và thực tế rằng, các nhà khoa học đang hàng ngày tìm kiếm được nhiều hơn nữa
 
 Tôi có thêm một ví dụ nữa về ứng dụng RAG trong chatbot tư vấn điện điện thoại:
-![image](https://hackmd.io/_uploads/By6LrPwXJg.png)
+![image](../assets/khkt/khkt_rag.png)
 
 > Chúng ta sẽ lấy dữ liệu về thông số của điện thoại cho LLMs để chúng đưa ra câu trả lời chính xác
 
@@ -68,10 +69,10 @@ Chạy lệnh sau trong terminal để khởi động một Docker container v�
 2. Truy Cập Giao Diện Quản Trị
 Sau khi container được khởi chạy, truy cập Giao diện Quản trị (Admin UI) tại địa chỉ:
 
-![image](https://hackmd.io/_uploads/HJup_DDX1g.png)
+![image](../assets/khkt/khkt_demo1.png)
 
 
-![image](https://hackmd.io/_uploads/r1sMoDPQ1e.png)
+![image](../assets/khkt/khkt_demo2.png)
 
-![image](https://hackmd.io/_uploads/H1_SiPDmJg.png)
+![image](../assets/khkt/khkt_demo3.png)
 
