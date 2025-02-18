@@ -67,3 +67,5 @@ Có một số bạn thường nói rằng: “Mình không biết làm nên kh�
 Cảm ơn mọi người đã đọc đến đây, lần đầu tôi viết dạng blog như này nên có hơi cộc lốc và những điều tôi chia sẻ nhiều bạn sẽ thấy sáo rỗng. Sau gần 3 năm, tôi đã học được nhiều điều từ các bạn và hi vọng các bạn cũng sẽ thấy được gì đó từ tôi. Có những lúc tôi cảm thấy mình không thuộc về nơi này, không ai cùng chung sở thích để chia sẻ. Nhưng sau tất cả tôi thấy rằng, không ai là hoàn hảo và hãy làm những điều tốt nhất trong môi trường hiện tại. 
 
 Cuối cùng tôi muốn chúc mọi người đều đỗ nguyện vọng 1; luôn có sức mạnh để vượt qua khó khăn. Hi vọng những năm sau họp lớp sẽ có nhiều bạn đến góp mặt nhé.
+
+Các bạn có thể chia sẻ cảm nhận của mình tại form sau: [Feedback](https://www.khanhthanhdev.me/posts/nhung-dieu-hoc-duoc-tai-truong-cap-3/)
