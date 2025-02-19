@@ -68,4 +68,4 @@ Cảm ơn mọi người đã đọc đến đây, lần đầu tôi viết dạ
 
 Cuối cùng tôi muốn chúc mọi người đều đỗ nguyện vọng 1; luôn có sức mạnh để vượt qua khó khăn. Hi vọng những năm sau họp lớp sẽ có nhiều bạn đến góp mặt nhé.
 
-Các bạn có thể chia sẻ cảm nhận của mình tại form sau: [Feedback](https://www.khanhthanhdev.me/posts/nhung-dieu-hoc-duoc-tai-truong-cap-3/)
+Các bạn có thể chia sẻ cảm nhận của mình tại form sau: [Feedback](https://forms.gle/ztKAA4mWuE7e5iY26)
