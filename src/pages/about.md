@@ -8,7 +8,7 @@ Hi! I'm Thanh.
 I'm a high school student who loves science, technology, engineering, and math (STEM). I'm really interested in robots and coding.
 
 Here are some cool things I've done:
-
+- I got FIRST Prize at Vietnam AI Contest 2024 by VLAB Innovation and Boston Global Forum (My team include: me, Huy Khanh, Hoang Minh, Huy Anh, Manh Linh)
 - I competed in a robotics challenge called [FIRST Global Challenge](https://first.global/about/) in Singapore and won a gold medal 
 - I went to a [Math and Science Summer Program](https://www.masspvn.org/) where I learned about Data Science and Machine Learning. 
 - My team wrote a research paper about making summaries of long medical documents even better using LSG Attention for BART Model.
