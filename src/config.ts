@@ -1,6 +1,6 @@
 import type { Site, SocialObjects } from "./types";
 import type { GiscusProps } from "@giscus/react";
-export const SITE: Site = {
+export const SITE = {
   website: "https://khanhthanhdev.me/", // replace this with your deployed domain
   author: "ThanhTran",
   profile: "https://khanhthanhdev.me/",
@@ -17,6 +17,10 @@ export const SITE: Site = {
     text: "Suggest Changes",
     appendFilePath: true,
   },
+  dynamicOgImage: true,
+  dir: "ltr", // "rtl" | "auto"
+  lang: "en", // html lang code. Set this empty and default will be "en"
+  timezone: "Asia/Bangkok", 
 };
 
 export const GISCUS: GiscusProps = {
