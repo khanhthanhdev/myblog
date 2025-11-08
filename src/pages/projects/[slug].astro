@@ -1,0 +1,169 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Hr from "@components/Hr.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map(project => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: any;
+}
+
+const { project } = Astro.props;
+const { title, description, image, link, github, tags } = project.data;
+const { Content } = await project.render();
+---
+
+<Layout title={title}>
+  <Header activeNav="projects" />
+  <main id="main-content">
+    <article>
+      <h1>{title}</h1>
+      <p class="description">{description}</p>
+
+      <div class="project-meta">
+        {
+          tags && tags.length > 0 && (
+            <div class="tags">
+              {tags.map(tag => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          )
+        }
+        <div class="links">
+          {
+            link && (
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                🔗 Visit Project
+              </a>
+            )
+          }
+          {
+            github && (
+              <a href={github} target="_blank" rel="noopener noreferrer">
+                🔗 GitHub
+              </a>
+            )
+          }
+        </div>
+      </div>
+
+      <div class="project-image">
+        <img src={image.src} alt={title} />
+      </div>
+
+      <Hr />
+
+      <div class="prose">
+        <Content />
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="/projects/">← Back to Projects</a>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  #main-content {
+    @apply mx-auto w-full max-w-3xl px-4 pb-4;
+  }
+
+  main {
+    @apply px-0;
+  }
+
+  article {
+    @apply py-12;
+  }
+
+  h1 {
+    @apply mb-4 text-3xl font-bold sm:text-5xl;
+  }
+
+  .description {
+    @apply mb-6 text-lg text-skin-base;
+  }
+
+  .project-meta {
+    @apply mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between;
+  }
+
+  .tags {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .tag {
+    @apply rounded-full bg-skin-card px-3 py-1 text-sm font-medium text-skin-accent;
+  }
+
+  .links {
+    @apply flex gap-4;
+  }
+
+  .links a {
+    @apply inline-flex items-center rounded-lg bg-skin-accent px-4 py-2 font-medium text-white transition-opacity hover:opacity-80;
+  }
+
+  .project-image {
+    @apply mb-8 overflow-hidden rounded-lg;
+  }
+
+  .project-image img {
+    @apply h-auto w-full;
+  }
+
+  .prose {
+    max-width: none;
+  }
+
+  .prose :where(p, li) {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose :where(h2, h3, h4) {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .prose h2 {
+    font-size: 1.5rem;
+  }
+
+  .prose h3 {
+    font-size: 1.25rem;
+  }
+
+  .prose :where(ul, ol) {
+    margin-left: 1.25rem;
+  }
+
+  .prose code {
+    background-color: var(--color-card-bg);
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+
+  .back-link {
+    @apply mt-12 text-center;
+  }
+
+  .back-link a {
+    @apply inline-block rounded-lg bg-skin-card px-4 py-2 font-medium text-skin-accent transition-opacity hover:opacity-80;
+  }
+</style>

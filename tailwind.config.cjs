@@ -19,6 +19,13 @@ module.exports = {
     },
 
     extend: {
+      colors: {
+        border: withOpacity("--border"),
+        accent: withOpacity("--accent"),
+        background: withOpacity("--background"),
+        foreground: withOpacity("--foreground"),
+        muted: withOpacity("--muted"),
+      },
       textColor: {
         skin: {
           base: withOpacity("--color-text-base"),

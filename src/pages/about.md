@@ -7,7 +7,7 @@ Hi! I'm Thanh.
 
 I will study Electrical and Computer Engineering at [Vin University](https://cecs.vinuni.edu.vn/) . I love science, technology, engineering, and math (STEM). I'm really interested in robots and coding.
 
-Currently, I'm volunteer at [STEAM For Vietnam](https://www.steamforvietnam.org/en) with role Software Engineering and Role Developer. I join project like building Robotics Tournament Management system, AI Agent for teacher, Robotic Tournament (coming soon).
+Currently, I'm volunteer at [STEAM For Vietnam](https://www.steamforvietnam.org/en) with role Software Engineering and Rule Developer. I join project like building Robotics Tournament Management system, AI Agent for teacher, Robotic Tournament (coming soon).
 
 
 Here are some cool things I've done:
