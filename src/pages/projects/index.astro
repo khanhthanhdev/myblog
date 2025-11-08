@@ -1,0 +1,143 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Hr from "@components/Hr.astro";
+
+const projects = await getCollection("projects");
+const sortedProjects = projects
+  .filter(project => !project.data.draft)
+  .sort((a, b) => {
+    if (a.data.featured && !b.data.featured) return -1;
+    if (!a.data.featured && b.data.featured) return 1;
+    return 0;
+  });
+---
+
+<Layout>
+  <Header activeNav="projects" />
+  <main id="main-content">
+    <section id="projects-hero">
+      <h1>Projects</h1>
+      <p>Showcase of my projects and works</p>
+    </section>
+
+    <Hr />
+
+    <section id="projects-grid">
+      <div class="projects-container">
+        {
+          sortedProjects.map(({ slug, data }) => (
+            <a href={`/projects/${slug}/`} class="project-card">
+              <div class="project-image">
+                <img src={data.image.src} alt={data.title} />
+              </div>
+              <div class="project-content">
+                <h3>{data.title}</h3>
+                <p>{data.description}</p>
+                {
+                  data.tags && data.tags.length > 0 && (
+                    <div class="tags">
+                      {data.tags.map(tag => (
+                        <span class="tag">{tag}</span>
+                      ))}
+                    </div>
+                  )
+                }
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  #main-content {
+    @apply mx-auto w-full max-w-3xl px-4 pb-4;
+  }
+
+  #projects-hero {
+    @apply pb-6 pt-8;
+  }
+
+  #projects-hero h1 {
+    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+  }
+
+  #projects-hero p {
+    @apply my-2 text-lg text-skin-base;
+  }
+
+  #projects-grid {
+    @apply py-12;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-image {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-card-bg);
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover .project-image img {
+    transform: scale(1.05);
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .project-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .project-card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.875rem;
+    color: var(--color-base);
+  }
+
+  .tags {
+    @apply flex flex-wrap gap-2 mt-2;
+  }
+
+  .tag {
+    @apply rounded-full bg-skin-card px-3 py-1 text-sm font-medium text-skin-accent;
+  }
+</style>

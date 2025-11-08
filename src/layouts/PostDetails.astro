@@ -22,6 +22,7 @@ const {
   description,
   ogImage,
   canonicalURL,
+  readingTime,
   pubDatetime,
   modDatetime,
   tags,
@@ -84,6 +85,7 @@ const nextPost =
       size="lg"
       className="my-2"
       editPost={editPost}
+      readingTime={readingTime}
       postId={post.id}
     />
     <article id="article" class="prose mx-auto mt-8 max-w-3xl">
@@ -91,7 +93,7 @@ const nextPost =
     </article>
 
     <ul class="my-8">
-      {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
+      {tags.map((tag: string) => <Tag tag={slugifyStr(tag)} />)}
     </ul>
 
     <div
@@ -111,6 +113,22 @@ const nextPost =
 
       <ShareLinks />
     </div>
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="khanhthanhdev/myblog"
+      data-repo-id="R_kgDONG0lCA"
+      data-category="Announcements"
+      data-category-id="DIC_kwDONG0lCM4Cj3Hx"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="dark"
+      data-lang="en"
+      crossorigin="anonymous"
+      async
+    ></script>
 
     <hr class="my-6 border-dashed" />
 

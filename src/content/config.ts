@@ -22,6 +22,7 @@ const blog = defineCollection({
         .optional(),
       description: z.string(),
       canonicalURL: z.string().optional(),
+      readingTime: z.string().optional(),
       editPost: z
         .object({
           disabled: z.boolean().optional(),
@@ -33,4 +34,20 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+const projects = defineCollection({
+  type: "content_layer",
+  loader: glob({ pattern: "**/*.md", base: "./src/content/projects" }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      image: image(),
+      link: z.string().optional(),
+      github: z.string().optional(),
+      tags: z.array(z.string()).default(["project"]),
+      featured: z.boolean().optional(),
+      draft: z.boolean().optional(),
+    }),
+});
+
+export const collections = { blog, projects };
